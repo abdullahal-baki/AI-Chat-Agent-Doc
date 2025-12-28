@@ -209,6 +209,20 @@ app/
 ## 💬 Chat Interface
 ![Dashboard](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/entry_page.png)
 
+---
+
+![Chat View](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/chat_view.png)
+
+---
+
+
+![HITL View](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/hitl_test.png)
+
+---
+
+
+![Memory Management](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/memory_management.png)
+
 ## 👤 Account Access
 ![Login](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/login.png)
 
