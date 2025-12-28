@@ -43,11 +43,156 @@ We utilize a hybrid memory architecture to simulate human-like recall:
 
 
 
+## 🛠️ Technical Stack
+| Domain | Technologies Used |
+|---|---|
+| **Core Framework** | Python 3.10+, FastAPI, Pydantic v2, NextJS |
+| **AI Orchestration** | **LangGraph**, LangChain, LangSmith |
+| **LLM Inference** | **Groq** / OpenAI / Google GenAI (pluggable)|
+| **Data Persistence** | **SQLAlchemy**, SQLite (Checkpoints), **Mem0** (User Memory) |
+| **Vector Search** | **Pinecone**, FAISS, Sentence Transformers |
+| **Web & Scraping** | **Crawl4AI**, Tavily, Wikipedia API, BeautifulSoup |
+| **Integrations** | Gmail API, OpenWeatherMap, IMDb |
+| **DevOps** | Docker, Alembic (Migrations), GitHub Actions, AWS |
 
 
+## 🔌 API Gateway Highlights
+The backend exposes a RESTful API designed for modern frontend consumption (Next.js):
+
+#### 💬 Conversational Endpoints
+- `POST /api/v1/chat/live-stream` — **SSE Streaming.** The primary endpoint for real-time chat with streaming tokens.
+- `POST /api/v1/text` — **Standard Chat.** Returns full JSON responses, including tool calls and HITL interrupt signals.
+- `POST /api/v1/voice` — **Audio Pipeline.** Accepts audio → Transcribes → Processes → Returns Audio/Text.
+- `POST /api/v1/code` — **Dev Mode.** Direct access to the coding agent for technical queries.
+
+#### 🧠 State & Memory Management
+History & State
+- `GET /api/v1/get-thread-ids` – List active threads
+- `GET /api/v1/chat_history/{thread_id}` – Retrieve chat history
+- `DELETE /api/v1/delete_thread/{thread_id}` – Delete a thread
 
 
+Memory (Mem0)
+- `POST /api/v1/add_memory`
+- `GET /api/v1/get_all_memory`
+- `GET /api/v1/get_single_memory/{memory_id}`
+- `PUT /api/v1/update_memory`
+- `PUT /api/v1/delete_memory/{memory_id}`
 
+#### ⚙️ Misc
+- `GET /api/v1/updates` – Entry page content updates
 
+## 📂 Project Structure
+```
+(Short Overview)
 
+app/
+├── ai/
+│   ├── graph/          # LangGraph Workflow Definitions (Supervisor, Multimodal)
+│   ├── nodes/          # Executable Units (Agents, Tools, Middlewares)
+│   ├── tools/          # Tool Implementations (Gmail, Context7, Weather, News)
+│   ├── prompts/        # System Prompts & Persona Definitions
+│   └── states/         # Graph State Schemas (TypedDict/Pydantic)
+├── db/                 # Database Layer (FAISS Indices, SQLite Files)
+├── routers/            # FastAPI Route Handlers (Chat, History, Memory)
+├── models/             # API Request/Response Schemas
+├── utils/              # Helpers (Transcriber, Scraper, Notifications)
+└── config/             # Environment & Configuration Loaders
+
+```
+------------------------
+```
+(Full Project Tree)
+.
+├─ alembic/
+│  ├─ env.py
+│  ├─ README
+│  └─ script.py.mako
+├─ app/
+│  ├─ ai/
+│  │  ├─ LLM/
+│  │  │  ├─ get_llm.py
+│  │  │  └─ __init__.py
+│  │  ├─ embeddings/
+│  │  │  ├─ get_embeddings.py
+│  │  │  └─ __init__.py
+│  │  ├─ graph/
+│  │  │  ├─ chatbot_graph.py
+│  │  │  ├─ code_agent_graph.py
+│  │  │  ├─ multimodal_agent_graph.py
+│  │  │  └─ __init__.py
+│  │  ├─ nodes/
+│  │  │  ├─ get_agents.py
+│  │  │  ├─ get_tools.py
+│  │  │  ├─ middlewares.py
+│  │  │  ├─ response.py
+│  │  │  └─ __init__.py
+│  │  ├─ prompts/
+│  │  │  ├─ system_prompts.py
+│  │  │  └─ __init__.py
+│  │  ├─ states/
+│  │  │  ├─ state.py
+│  │  │  └─ __init__.py
+│  │  ├─ tools/
+│  │  │  ├─ context7_tools.py
+│  │  │  ├─ gmail_tools.py
+│  │  │  ├─ langchain_tools.py
+│  │  │  ├─ mcp_tools.py
+│  │  │  ├─ movie_catalog_tools.py
+│  │  │  ├─ news_tools.py
+│  │  │  ├─ vector_retrievers.py
+│  │  │  ├─ weather_tools.py
+│  │  │  └─ web_tools.py
+│  │  ├─ utils/
+│  │  |  ├─ memory_management.py
+│  │  |  └─ __init__.py
+│  │  ├─ chatbot.py
+│  │  ├─ __init__.py
+│  ├─ db/
+|  |  └─faiss
+|  |  |  ├─memory.faiss
+|  |  |  └─memory.pkl
+│  |  ├─ ai_headlines.pkl
+│  |  ├─ bdnews_headlines.pkl
+│  |  ├─ dev_headlines.pkl
+│  |  ├─ jago_headlines.pkl
+│  |  ├─ chatbot_agent_memory.db
+│  |  └─ movie_database.db
+│  ├─ config/
+│  │  ├─ configer.py
+│  │  └─ __init__.py
+│  ├─ models/
+│  │  ├─ request.py
+│  │  ├─ response.py
+│  │  └─ __init__.py
+│  ├─ routers/
+│  │  ├─ chat.py
+│  │  ├─ history.py
+│  │  ├─ memory_router.py
+│  │  ├─ miscellaneous.py
+│  │  └─ __init__.py
+│  ├─ utils/
+│  │  ├─ news_scraper.py
+│  │  ├─ notifier_bot.py
+│  │  ├─ transcriber.py
+│  │  └─ __init__.py
+│  ├─ app.py
+│  ├─ __init__.py
+├─ notebooks/
+│  ├─ long-term-memory-test.ipynb
+│  ├─ movie-management-agent.ipynb
+│  └─ MultiModal.ipynb
+├─ tests/
+│  ├─ conftest.py
+│  ├─ test_tools.py
+│  └─ test_tools_utils.py
+├─ .env
+├─ .gitignore
+├─ README.md
+├─ requirements.txt
+├─ requirements-dev.txt
+├─ pyproject.toml
+├─ setup.cfg
+└─ Dockerfile
+```
 
