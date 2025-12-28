@@ -43,7 +43,7 @@ We utilize a hybrid memory architecture to simulate human-like recall:
 - **Voice Pipeline:** End-to-end voice support using **Deepgram** for transcription and helper utilities for Text-to-Speech (TTS).
 
 
-
+---------------
 
 ## 🛠️ Technical Stack
 | Domain | Technologies Used |
@@ -57,6 +57,7 @@ We utilize a hybrid memory architecture to simulate human-like recall:
 | **Integrations** | Gmail API, OpenWeatherMap, IMDb |
 | **DevOps** | Docker, Alembic (Migrations), GitHub Actions, AWS |
 
+----------------------
 
 ## 🔌 API Gateway Highlights
 The backend exposes a RESTful API designed for modern frontend consumption (Next.js):
@@ -86,6 +87,8 @@ Memory (Mem0)
 
 ![API Routers](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/api_routers.png)
 
+----------------------------
+
 ## 📂 Project Structure
 ```
 (Short Overview)
@@ -104,7 +107,6 @@ app/
 └── config/             # Environment & Configuration Loaders
 
 ```
-------------------------
 ```
 (Full Project Tree)
 .
@@ -204,27 +206,11 @@ app/
 
 # 🖼️ Screenshots
 
-## 📊 Dashboard
-![Dashboard](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/Dashboard.png)
-## 📁 Leads Page
-![Lead Management](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/leads-management.png)
-![Lead Details View](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/lead-details-view.png)
-## 🧩 Prompts Management
-![Prompt Management](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/prompt-management.png)
-## 🎯 Campaigns Page
-![Campaign Management](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/campaign-management.png)
-![Campaign Control Page](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/campaign-control-page.png)
-![Campaign Control Tab](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/campaign-prompt-control-tab.png)
-## 🤖 Agent Playground
-![Agent Playground](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/agent-test-page.png)
-![Agent Graph](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/agent-graph.png)
+## 💬 Chat Interface
+![Dashboard](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/entry_page.png)
 
-## 🔑 API Configuration
-![API config page](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/api-key-management.png)
 ## 👤 Account Access (Login & Register)
-![Login](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/login.png)
-![sign up](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/signup.png)
-
+![Login](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/login.png)
 
 ---
 
