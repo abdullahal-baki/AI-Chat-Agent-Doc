@@ -220,6 +220,9 @@ app/
 
 ---
 
+![Chat History View](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/chat_history.png)
+
+---
 
 ![Memory Management](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/memory_management.png)
 
