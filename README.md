@@ -196,3 +196,89 @@ app/
 └─ Dockerfile
 ```
 
+---
+
+# 🖼️ Screenshots
+
+## 📊 Dashboard
+![Dashboard](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/Dashboard.png)
+## 📁 Leads Page
+![Lead Management](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/leads-management.png)
+![Lead Details View](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/lead-details-view.png)
+## 🧩 Prompts Management
+![Prompt Management](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/prompt-management.png)
+## 🎯 Campaigns Page
+![Campaign Management](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/campaign-management.png)
+![Campaign Control Page](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/campaign-control-page.png)
+![Campaign Control Tab](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/campaign-prompt-control-tab.png)
+## 🤖 Agent Playground
+![Agent Playground](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/agent-test-page.png)
+![Agent Graph](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/agent-graph.png)
+
+## 🔑 API Configuration
+![API config page](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/api-key-management.png)
+## 👤 Account Access (Login & Register)
+![Login](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/login.png)
+![sign up](https://github.com/abdullahal-baki/Full-Stack-AI-Lead-Automation-System/blob/main/images/signup.png)
+
+
+---
+
+# 🧪 Monitoring (LangSmith)
+
+The system includes full observability:
+- Agent traces  
+- Prompt debugging  
+- Error tracking  
+- RAG performance visualization  
+
+---
+
+# 🏁 Final Result
+
+A complete, autonomous **AI Agent** ecosystem capable of:
+- **Advanced LLM Reasoning:** Harnesses the full strength of state-of-the-art models (OpenAI, Gemini) for complex decision-making.
+- **Hyper-Personalized Memory:** Retains user context and preferences (Short-Term & Long-Term) to deliver highly tailored responses.
+- **Inbox Automation:** Autonomously manages email workflows (Read, Draft, Send) with optional human oversight.
+- **Real-Time Intelligence:** Fetches and synthesizes up-to-the-minute data using advanced web search tools.
+- **Universal Integration:** Designed with an extensible architecture to connect seamlessly with any external API or digital service.
+
+---
+
+# 📬 Contact / Credits
+
+If you want to extend or customize this system:  
+**Developer:** _Md Abdullah Al Baki_  
+**Email:** _abdullahalbaki009@gmail.com_  
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
