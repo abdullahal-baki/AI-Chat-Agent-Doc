@@ -4,6 +4,8 @@ A state-of-the-art **Agentic AI Backend** engineered with **FastAPI** and **Lang
 
 Designed for scalability, it features **human-in-the-loop (HITL)** controls, **real-time streaming**, and **multimodal** processing.
 
+![Thumnail](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/thumnail.png)
+
 ## 🚀 System Architecture & Capabilities
 
 ### 1. Supervised Multi-Agent Workflow
