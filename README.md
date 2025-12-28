@@ -82,6 +82,8 @@ Memory (Mem0)
 #### ⚙️ Misc
 - `GET /api/v1/updates` – Entry page content updates
 
+![API Routers](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/api_routers.png)
+
 ## 📂 Project Structure
 ```
 (Short Overview)
