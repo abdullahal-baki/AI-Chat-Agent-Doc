@@ -209,7 +209,7 @@ app/
 ## 💬 Chat Interface
 ![Dashboard](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/entry_page.png)
 
-## 👤 Account Access (Login & Register)
+## 👤 Account Access
 ![Login](https://github.com/abdullahal-baki/AI-Chat-Agent-Doc/blob/main/assets/login.png)
 
 ---
